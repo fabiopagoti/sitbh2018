@@ -22,8 +22,7 @@ sap.ui.define([
 			var oPromiseMetadataLoaded = this.getModel().metadataLoaded();
 			oPromiseMetadataLoaded.then(function() {
 
-				this._oContext = oModel.createEntry("/Categories", {
-				});
+				this._oContext = oModel.createEntry("/Categories", {});
 
 				this.getView().setBindingContext(this._oContext);
 
@@ -31,24 +30,29 @@ sap.ui.define([
 		},
 
 		onSave: function() {
-			
-			
-			function onSuccess(oNovaCategoria){
-				MessageToast.show("Coleção cadastrada com sucesso");
+
+			function onSuccess(oNovaCategoria) {
+				MessageToast.show("Coleção cadastrada com sucesso",{
+					closeOnBrowserNavigation: false
+				});
+				this.getRouter().navTo("produtos", {
+					idCategoria: this._oContext.getProperty("ID")
+				});
 			}
-			
-			function onError(oError){
+
+			function onError(oError) {
 				MessageBox.error("Erro na criação da categoria");
 			}
-			
+
 			this.getModel().submitChanges({
 				success: onSuccess.bind(this),
 				error: onError.bind(this)
 			});
 		},
-		
-		onCancel: function(){
+
+		onCancel: function() {
 			this.getModel().deleteCreatedEntry(this._oContext);
+			this.onNavBack();
 		}
 	});
 
