@@ -1,0 +1,32 @@
+{
+  "routes": [
+    {
+      "path": "/resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/resources"
+      },
+      "description": "SAPUI5 Resources"
+    },
+    {
+      "path": "/test-resources",
+      "target": {
+        "type": "service",
+        "name": "sapui5",
+        "entryPath": "/test-resources"
+      },
+      "description": "SAPUI5 Test Resources"
+    },
+    {
+      "path": "/ODATA_SAMPLE",
+      "target": {
+        "type": "destination",
+        "name": "ODATA_SAMPLE"
+      },
+      "description": "oData.org - example"
+    }
+  ],
+  "welcomeFile": "/webapp/index.html",
+  "sendWelcomeFileRedirect": true
+}

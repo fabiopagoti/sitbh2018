@@ -1,0 +1,11 @@
+<mvc:View
+	controllerName="sitbh.controller.Categorias"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+	
+	<Page title="Categorias">
+		
+	</Page>
+	
+</mvc:View>
