@@ -1,36 +1,38 @@
 <mvc:View xmlns="sap.m" xmlns:mvc="sap.ui.core.mvc" controllerName="sitbh.controller.Produtos">
 	<Page title="Produtos" showNavButton="true" navButtonPress="onNavBack">
 		<content>
-			<ObjectHeader intro="{ID}" title="{Name}" />
-			<Table noDataText="Drop column list items here and columns in the area above" id="__table0">
+			<ObjectHeader intro="{ID}" title="{Name}"/>
+			<Table noDataText="Nenhum produto encontrado" items="{path: 'Products'}">
 				<items>
-					<ColumnListItem id="__item0">
+					<ColumnListItem>
 						<cells>
-							<Text text="Row 1 Cell 1" id="__text7"/>
-							<Text text="Row 1 Cell 2" id="__text8"/>
-							<Text text="Row 1 Cell 3" id="__text9"/></cells>
-					</ColumnListItem>
-					<ColumnListItem id="__item1">
-						<cells>
-							<Text text="Row 2 Cell 1" id="__text10"/>
-							<Text text="Row 2 Cell 2" id="__text11"/>
-							<Text text="Row 2 Cell 3" id="__text12"/></cells>
+							<ObjectIdentifier title="{ID}" text="{Name}"/>
+							<Text
+								text="{path: 'ReleaseDate', type: 'sap.ui.model.odata.type.DateTime', formatOptions: { format: 'yMMMMd' } }"/>
+							<RatingIndicator value="{Rating}"/>
+							<ObjectNumber number="{Price}" state="{ path: 'Price', formatter: '.formatter.priceToState' }" unit="USD"/>
+						</cells>
 					</ColumnListItem>
 				</items>
 				<columns>
-					<Column id="__column0">
+					<Column>
 						<header>
-							<Label text="Header 1" id="__label0"/>
+							<Label text="Product"/>
 						</header>
 					</Column>
-					<Column id="__column1">
+					<Column>
 						<header>
-							<Label text="Header 2" id="__label1"/>
+							<Label text="Release Date"/>
 						</header>
 					</Column>
-					<Column id="__column2">
+					<Column>
 						<header>
-							<Label text="Header 3" id="__label2"/>
+							<Label text="Rating"/>
+						</header>
+					</Column>
+					<Column>
+						<header>
+							<Label text="Price"/>
 						</header>
 					</Column>
 				</columns>
