@@ -15,6 +15,14 @@
 				</items>
 			</List>
 		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button icon="sap-icon://add" press="onAdd" />
+				</content>
+			</Toolbar>
+		</footer>
 	</Page>
 	
 </mvc:View>

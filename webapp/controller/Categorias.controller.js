@@ -21,6 +21,10 @@ sap.ui.define([
 			this.getRouter().navTo("produtos",{
 				idCategoria: oCategory.ID
 			});
+		},
+		
+		onAdd: function(){
+			this.getRouter().navTo("novaCategoria");
 		}
 		
 	});

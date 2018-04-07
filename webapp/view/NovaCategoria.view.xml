@@ -1,0 +1,30 @@
+<mvc:View 
+	controllerName="sitbh.controller.NovaCategoria"
+	xmlns:core="sap.ui.core" 
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns="sap.m" 
+	xmlns:l="sap.ui.layout"
+	xmlns:f="sap.ui.layout.form">
+	<Page title="Nova Categoria" navButtonPress="onNavBack" showNavButton="true">
+		<content>
+			<f:SimpleForm 
+			layout="ResponsiveGridLayout">
+			<f:content>
+				<Label text="ID" />
+				<Input value="{ID}" />
+				<Label text="Name" />
+				<Input value="{Name}" />
+			</f:content>
+		</f:SimpleForm>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<Button icon="sap-icon://save" text="Salvar" type="Emphasized" press="onSave" />
+					<Button text="Cancelar" press="onCancel" />
+				</content>
+			</Toolbar>
+		</footer>
+	</Page>
+	
+</mvc:View>

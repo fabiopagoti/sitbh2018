@@ -84,6 +84,10 @@
 				"name": "produtos",
 				"pattern": "/Categorias/{idCategoria}",
 				"target": ["produtos"]
+			},{
+				"name": "novaCategoria",
+				"pattern": "/NovaCategoria",
+				"target": ["cadastro"]
 			}],
 			"targets": {
 				"categorias": {
@@ -92,6 +96,10 @@
 				},
 				"produtos": {
 					"viewName": "Produtos",
+					"viewLevel": 2
+				},
+				"cadastro": {
+					"viewName": "NovaCategoria",
 					"viewLevel": 2
 				}
 			}
