@@ -6,7 +6,14 @@ sap.ui.define([
 	return BaseController.extend("sitbh.controller.App", {
 		
 		onItemPress: function(oEvent){
-			alert("Item " + oEvent.getParameters().listItem.getTitle() + " clicado");
+			var oListItem = oEvent.getParameters().listItem;
+			var oContext = oListItem.getBindingContext();
+			var oCategory = oContext.getObject();
+			alert("Item " + oCategory.Name + " clicado");
+		},
+		
+		upperCase: function(sText){
+			return sText.toUpperCase();
 		}
 	});
 

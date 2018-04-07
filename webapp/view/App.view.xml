@@ -9,11 +9,12 @@
 		<pages>
 			<Page title="Tela Inicial">
 				<content>
-					<List mode="SingleSelectMaster" itemPress="onItemPress" >
+					<List mode="SingleSelectMaster" itemPress="onItemPress" items="{path: '/Categories' }" >
 						<items>
-							<StandardListItem title="Comidas" type="Active"  />
-							<StandardListItem title="Bebidas" type="Active" />
-							<StandardListItem title="Eletrônicos" type="Active"/>
+							<StandardListItem  
+								type="Active" 
+								title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.upperCase'}" 
+							/>
 						</items>
 					</List>
 				</content>
