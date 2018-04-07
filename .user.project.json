@@ -10,13 +10,18 @@
       "isDefaultVersion": 0,
       "urlParameters": [],
       "hashParameter": "",
-      "backendSystem": [],
+      "backendSystem": [
+        {
+          "source": "ODATA_SAMPLE",
+          "destinations": "ODATA_SAMPLE"
+        }
+      ],
       "urlParametersNotNeeded": false,
       "_metadata": {
-        "runnerId": "webapprunner",
         "id": 4452493,
+        "runnerId": "webapprunner",
         "displayName": "Run index.html",
-        "lastRunTimeStamp": 1523065890485
+        "lastRunTimeStamp": 1523070980867
       }
     }
   ]
