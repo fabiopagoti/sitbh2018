@@ -22,7 +22,7 @@ sap.ui.define([
 			var sIdCategoria = oArguments.idCategoria;
 
 			var oPromiseMetadataLoaded = this.getModel().metadataLoaded();
-			oPromiseMetadataLoaded.then(function(a, b, c) {
+			oPromiseMetadataLoaded.then(function() {
 				
 				var sKey = this.getModel().createKey("Categories", {
 					ID: sIdCategoria
