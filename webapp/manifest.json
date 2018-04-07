@@ -61,7 +61,10 @@
 			},
 			"": {
 				"dataSource": "mainService",
-				"preload": true
+				"preload": true,
+				"settings": {
+					"disableHeadRequestForToken": true
+				}
 			}
 		},
 		"routing": {
@@ -72,15 +75,13 @@
 				"controlId": "mainContainer",
 				"controlAggregation": "pages"
 			},
-			"routes": [
-				{
-					"pattern": "/Categorias",
-					"name": "default",
-					"target": [
-						"categorias"
-					]
-				}
-			],
+			"routes": [{
+				"pattern": "/Categorias",
+				"name": "default",
+				"target": [
+					"categorias"
+				]
+			}],
 			"targets": {
 				"categorias": {
 					"viewName": "Categorias"
