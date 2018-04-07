@@ -73,16 +73,26 @@
 				"viewType": "XML",
 				"viewPath": "sitbh.view",
 				"controlId": "mainContainer",
-				"controlAggregation": "pages"
+				"controlAggregation": "pages",
+				"transition": "flip"
 			},
 			"routes": [{
-				"pattern": "/Categorias",
+				"pattern": "",
 				"name": "default",
 				"target": ["categorias"]
+			}, {
+				"name": "produtos",
+				"pattern": "/Categorias/{idCategoria}",
+				"target": ["produtos"]
 			}],
 			"targets": {
 				"categorias": {
-					"viewName": "Categorias"
+					"viewName": "Categorias",
+					"viewLevel": 1
+				},
+				"produtos": {
+					"viewName": "Produtos",
+					"viewLevel": 2
 				}
 			}
 		}

@@ -5,7 +5,16 @@
 	xmlns="sap.m">
 	
 	<Page title="Categorias">
-		
+		<content>
+			<List mode="SingleSelectMaster" itemPress="onItemPress" items="{path: '/Categories' }" >
+				<items>
+					<StandardListItem  
+						type="Active" 
+						title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.formatter.upperCase'}" 
+					/>
+				</items>
+			</List>
+		</content>
 	</Page>
 	
 </mvc:View>

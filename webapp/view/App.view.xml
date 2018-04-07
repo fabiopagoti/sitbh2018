@@ -5,20 +5,9 @@
 	xmlns:core="sap.ui.core"
 	xmlns="sap.m">
 	
-	<App >
+	<App id="mainContainer">
 		<pages>
-			<Page title="Tela Inicial">
-				<content>
-					<List mode="SingleSelectMaster" itemPress="onItemPress" items="{path: '/Categories' }" >
-						<items>
-							<StandardListItem  
-								type="Active" 
-								title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.upperCase'}" 
-							/>
-						</items>
-					</List>
-				</content>
-			</Page>
+			
 		</pages>
 	</App>
 	

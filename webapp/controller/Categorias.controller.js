@@ -11,7 +11,17 @@ sap.ui.define([
 
 		onInit: function() {
 
+		},
+			
+		onItemPress: function(oEvent){
+			var oListItem = oEvent.getParameters().listItem;
+			var oContext = oListItem.getBindingContext();
+			var oCategory = oContext.getObject();
+			// alert("Item " + oCategory.Name + " clicado");
+			this.getRouter().navTo("produtos",{
+				idCategoria: oCategory.ID
+			});
 		}
-
+		
 	});
 });
