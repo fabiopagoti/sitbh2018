@@ -20,6 +20,7 @@
 		<footer>
 			<Toolbar>
 				<content>
+					<ToolbarSpacer />
 					<Button icon="sap-icon://save" text="Salvar" type="Emphasized" press="onSave" />
 					<Button text="Cancelar" press="onCancel" />
 				</content>
