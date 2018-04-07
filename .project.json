@@ -12,7 +12,8 @@
     "excludedFiles": [
       "test.html"
     ],
-    "buildRequired": true
+    "buildRequired": false,
+    "lastBuildDateTime": "Sat, 07 Apr 2018 07:17:16 GMT"
   },
   "dataBinding": {
     "/webapp/view/App.view.xml": {
@@ -62,5 +63,10 @@
     "notifyBeforePushLevel": "Error",
     "blockPush": false,
     "blockPushLevel": "Error"
+  },
+  "hcpdeploy": {
+    "account": "p2000214790trial",
+    "name": "sitbh2018teste",
+    "lastVersionWeTriedToDeploy": "1.0.0"
   }
 }

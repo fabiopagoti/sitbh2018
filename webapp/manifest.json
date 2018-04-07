@@ -77,19 +77,29 @@
 				"controlAggregation": "pages",
 				"transition": "flip"
 			},
-			"routes": [{
-				"pattern": "",
-				"name": "default",
-				"target": ["categorias"]
-			}, {
-				"name": "produtos",
-				"pattern": "/Categorias/{idCategoria}",
-				"target": ["produtos"]
-			}, {
-				"name": "novaCategoria",
-				"pattern": "/NovaCategoria",
-				"target": ["cadastro"]
-			}],
+			"routes": [
+				{
+					"pattern": "",
+					"name": "default",
+					"target": [
+						"categorias"
+					]
+				},
+				{
+					"name": "produtos",
+					"pattern": "/Categorias/{idCategoria}",
+					"target": [
+						"produtos"
+					]
+				},
+				{
+					"name": "novaCategoria",
+					"pattern": "/NovaCategoria",
+					"target": [
+						"cadastro"
+					]
+				}
+			],
 			"targets": {
 				"categorias": {
 					"viewName": "Categorias",
@@ -105,5 +115,9 @@
 				}
 			}
 		}
+	},
+	"sap.platform.hcp": {
+		"uri": "webapp",
+		"_version": "1.1.0"
 	}
 }
