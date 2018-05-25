@@ -1,28 +1,20 @@
-<mvc:View
-	controllerName="sitbh.controller.Categorias"
-	xmlns:mvc="sap.ui.core.mvc"
-	xmlns:core="sap.ui.core"
-	xmlns="sap.m">
-	
-	<Page title="Categorias">
+<mvc:View controllerName="sitbh.controller.Categorias" xmlns:mvc="sap.ui.core.mvc" xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Page title="Categories">
 		<content>
-			<List mode="SingleSelectMaster" itemPress="onItemPress" items="{path: '/Categories' }" >
+			<List mode="SingleSelectMaster" itemPress="onItemPress" items="{path: '/Categories' }">
 				<items>
-					<StandardListItem  
-						type="Active" 
-						title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.formatter.upperCase'}" 
-					/>
+					<StandardListItem type="Active"
+						title="{path: 'ID', type: 'sap.ui.model.odata.type.Int32', formatOptions: { pattern: '0000'} } - {path: 'Name', formatter: '.formatter.upperCase'}"/>
 				</items>
 			</List>
 		</content>
 		<footer>
 			<Toolbar>
 				<content>
-					<ToolbarSpacer />
-					<Button icon="sap-icon://add" press="onAdd" />
+					<ToolbarSpacer/>
+					<Button icon="sap-icon://add" press="onAdd"/>
 				</content>
 			</Toolbar>
 		</footer>
 	</Page>
-	
 </mvc:View>
